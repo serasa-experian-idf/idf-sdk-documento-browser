@@ -16,6 +16,8 @@
                 limiteNumeroTentativasErro: document.getElementById('limiteNumeroTentativasErro').value,
                 timeoutCaptura: document.getElementById('timeoutCaptura').value,
                 cdnModelo: document.getElementById('cdnModelo').value,
+                mensagemVerso: document.getElementById('mensagemVerso').value,
+                tituloMensagemVerso: document.getElementById('tituloMensagemVerso').value,
                 documentosAceitos: document.getElementById('documentosAceitos').value,
                 wizzard: document.getElementById('wizzard').checked,
                 corPrimary: document.getElementById('corPrimary').value,
@@ -23,6 +25,7 @@
                 corTextCorpo: document.getElementById('corTextCorpo').value,
                 corTextTitle: document.getElementById('corTextTitle').value,
                 corTextButton: document.getElementById('corTextButton').value,
+                radiusButton: document.getElementById('radiusButton').value,
                 previewTitleSideA: document.getElementById('previewTitleSideA').value,
                 previewTitleSideB: document.getElementById('previewTitleSideB').value
             };
@@ -53,7 +56,10 @@
             document.getElementById('corTextCorpo').value = config.corTextCorpo
             document.getElementById('corTextTitle').value = config.corTextTitle
             document.getElementById('corTextButton').value = config.corTextButton
+            document.getElementById('radiusButton').value = config.radiusButton
             document.getElementById('cdnModelo').value = config?.cdnModelo;
+            document.getElementById('mensagemVerso').value = config?.mensagemVerso;
+            document.getElementById('tituloMensagemVerso').value = config?.tituloMensagemVerso;
             document.getElementById('previewTitleSideA').value = config.previewTitleSideA;
             document.getElementById('previewTitleSideB').value = config.previewTitleSideB;
         }
@@ -116,6 +122,10 @@
 
         <div class="row">
             <div>
+                <label for="radiusButton">Radius botão:</label>
+                <input type="text" id="radiusButton" name="radiusButton" value="48px"><br><br>
+            </div>
+            <div>
                 <label for="timeoutCaptura">Timeout para captura automática (ms):</label>
                 <input type="number" id="timeoutCaptura" name="timeoutCaptura" value="120000"><br><br>
             </div>
@@ -134,6 +144,15 @@
 
                 <label for="cdnModelo">CDN Modelo:</label>
                 <input type="text" id="cdnModelo" name="cdnModelo" value=""><br><br>
+
+
+                <label for="mensagemVerso">Texto mensagem verso:</label>
+                <input type="text" id="mensagemVerso" name="mensagemVerso" value=""><br><br>
+
+
+                <label for="tituloMensagemVerso">Texto titulo mensagem verso:</label>
+                <input type="text" id="tituloMensagemVerso" name="tituloMensagemVerso" value=""><br><br>
+
 
             </div>
         </div>
