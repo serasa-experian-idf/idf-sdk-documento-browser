@@ -15,9 +15,6 @@
                 capturaEmDesktop: document.getElementById('capturaEmDesktop').checked,
                 limiteNumeroTentativasErro: document.getElementById('limiteNumeroTentativasErro').value,
                 timeoutCaptura: document.getElementById('timeoutCaptura').value,
-                cdnModelo: document.getElementById('cdnModelo').value,
-                mensagemVerso: document.getElementById('mensagemVerso').value,
-                tituloMensagemVerso: document.getElementById('tituloMensagemVerso').value,
                 documentosAceitos: document.getElementById('documentosAceitos').value,
                 wizzard: document.getElementById('wizzard').checked,
                 corPrimary: document.getElementById('corPrimary').value,
@@ -27,7 +24,9 @@
                 corTextButton: document.getElementById('corTextButton').value,
                 radiusButton: document.getElementById('radiusButton').value,
                 previewTitleSideA: document.getElementById('previewTitleSideA').value,
-                previewTitleSideB: document.getElementById('previewTitleSideB').value
+                previewTitleSideB: document.getElementById('previewTitleSideB').value,
+                cdnModelo: document.getElementById('cdnModelo').value,
+                habilitarTextosPersonalizados: document.getElementById('habilitarTextosPersonalizados').checked
             };
 
             localStorage.setItem('config', JSON.stringify(config));
@@ -57,16 +56,14 @@
             document.getElementById('corTextTitle').value = config.corTextTitle
             document.getElementById('corTextButton').value = config.corTextButton
             document.getElementById('radiusButton').value = config.radiusButton
-            document.getElementById('cdnModelo').value = config?.cdnModelo;
-            document.getElementById('mensagemVerso').value = config?.mensagemVerso;
-            document.getElementById('tituloMensagemVerso').value = config?.tituloMensagemVerso;
             document.getElementById('previewTitleSideA').value = config.previewTitleSideA;
             document.getElementById('previewTitleSideB').value = config.previewTitleSideB;
+            document.getElementById('cdnModelo').value = config.cdnModelo;
+            document.getElementById('habilitarTextosPersonalizados').checked = config.habilitarTextosPersonalizados;
         }
 
         window.onload = function () {
             updateForm();
-            document.getElementById('cdnModelo').value = config.cdnModelo;
         }
     </script>
 </head>
@@ -141,19 +138,8 @@
                 <label for="fontFamily">Fonte:</label>
                 <input type="text" id="fontFamily" name="fontFamily" value="Roboto"><br><br>
 
-
                 <label for="cdnModelo">CDN Modelo:</label>
                 <input type="text" id="cdnModelo" name="cdnModelo" value=""><br><br>
-
-
-                <label for="mensagemVerso">Texto mensagem verso:</label>
-                <input type="text" id="mensagemVerso" name="mensagemVerso" value=""><br><br>
-
-
-                <label for="tituloMensagemVerso">Texto titulo mensagem verso:</label>
-                <input type="text" id="tituloMensagemVerso" name="tituloMensagemVerso" value=""><br><br>
-
-
             </div>
         </div>
 
@@ -176,6 +162,11 @@
             <div style="flex-direction: row; align-items: end;">
                 <input style="margin-right: 10px" type="checkbox" id="wizzard" name="wizzard"><br><br>
                 <label for="wizzard">Iniciar Wizard</label>
+            </div>
+            <div style="flex-direction: row; align-items: end;">
+                <input style="margin-right: 10px" type="checkbox" id="habilitarTextosPersonalizados"
+                    name="habilitarTextosPersonalizados"><br><br>
+                <label for="habilitarTextosPersonalizados">habilitarTextosPersonalizados:</label>
             </div>
         </div>
 
