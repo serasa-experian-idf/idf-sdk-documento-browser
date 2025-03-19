@@ -13,6 +13,7 @@
                 tamanhoArquivos: document.getElementById('tamanhoArquivos').value,
                 enviarTxt: document.getElementById('enviarTxt').value,
                 capturaEmDesktop: document.getElementById('capturaEmDesktop').checked,
+                showCancelButton: document.getElementById('showCancelButton').checked,
                 limiteNumeroTentativasErro: document.getElementById('limiteNumeroTentativasErro').value,
                 timeoutCaptura: document.getElementById('timeoutCaptura').value,
                 documentosAceitos: document.getElementById('documentosAceitos').value,
@@ -29,14 +30,14 @@
                 habilitarTextosPersonalizados: document.getElementById('habilitarTextosPersonalizados').checked
             };
 
-            localStorage.setItem('config', JSON.stringify(config));
+            localStorage.setItem('config_doc', JSON.stringify(config));
 
             alert('Configurações salvas!');
             window.location.href = 'index.html'; // Redireciona para index.html
         }
 
         function clearConfigForm() {
-            localStorage.removeItem('config');
+            localStorage.removeItem('config_doc');
             updateForm();
         }
 
@@ -46,6 +47,7 @@
             document.getElementById('tamanhoArquivos').value = config.tamanhoArquivos;
             document.getElementById('enviarTxt').value = config.enviarTxt;
             document.getElementById('capturaEmDesktop').checked = config.capturaEmDesktop;
+            document.getElementById('showCancelButton').checked = config.showCancelButton;
             document.getElementById('limiteNumeroTentativasErro').value = config.limiteNumeroTentativasErro;
             document.getElementById('timeoutCaptura').value = config.timeoutCaptura;
             document.getElementById('documentosAceitos').value = config.documentosAceitos;
@@ -158,6 +160,10 @@
             <div style="flex-direction: row;align-items: end">
                 <input style="margin-right: 10px" type="checkbox" id="capturaEmDesktop" name="capturaEmDesktop"><br><br>
                 <label for="capturaEmDesktop">Habilitar Captura de Documentos em Desktop</label>
+            </div>
+            <div style="flex-direction: row;align-items: end">
+                <input style="margin-right: 10px" type="checkbox" id="showCancelButton" name="showCancelButton"><br><br>
+                <label for="showCancelButton">Habilitar botão de fechar</label>
             </div>
             <div style="flex-direction: row; align-items: end;">
                 <input style="margin-right: 10px" type="checkbox" id="wizzard" name="wizzard"><br><br>
