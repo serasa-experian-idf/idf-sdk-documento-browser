@@ -27,7 +27,9 @@
                 previewTitleSideA: document.getElementById('previewTitleSideA').value,
                 previewTitleSideB: document.getElementById('previewTitleSideB').value,
                 cdnModelo: document.getElementById('cdnModelo').value,
-                habilitarTextosPersonalizados: document.getElementById('habilitarTextosPersonalizados').checked
+                habilitarTextosPersonalizados: document.getElementById('habilitarTextosPersonalizados').checked,
+                habilitarImagemUploladMaisCustomizada: document.getElementById('habilitarImagemUploladMaisCustomizada').checked,
+                
             };
 
             localStorage.setItem('config_doc', JSON.stringify(config));
@@ -62,6 +64,9 @@
             document.getElementById('previewTitleSideB').value = config.previewTitleSideB;
             document.getElementById('cdnModelo').value = config.cdnModelo;
             document.getElementById('habilitarTextosPersonalizados').checked = config.habilitarTextosPersonalizados;
+            document.getElementById('habilitarImagemUploladMaisCustomizada').checked = config.habilitarImagemUploladMaisCustomizada;
+
+            
         }
 
         window.onload = function () {
@@ -173,6 +178,12 @@
                 <input style="margin-right: 10px" type="checkbox" id="habilitarTextosPersonalizados"
                     name="habilitarTextosPersonalizados"><br><br>
                 <label for="habilitarTextosPersonalizados">habilitarTextosPersonalizados:</label>
+            </div>
+
+            <div style="flex-direction: row; align-items: end;">
+                <input style="margin-right: 10px" type="checkbox" id="habilitarImagemUploladMaisCustomizada"
+                    name="habilitarImagemUploladMaisCustomizada"><br><br>
+                <label for="habilitarImagemUploladMaisCustomizada">habilitarImagemUploladMaisCustomizada:</label>
             </div>
         </div>
 
