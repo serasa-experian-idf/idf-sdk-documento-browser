@@ -24,11 +24,13 @@
                 corTextTitle: document.getElementById('corTextTitle').value,
                 corTextButton: document.getElementById('corTextButton').value,
                 radiusButton: document.getElementById('radiusButton').value,
+                tamanhoTitulo: document.getElementById('tamanhoTitulo').value,
                 previewTitleSideA: document.getElementById('previewTitleSideA').value,
                 previewTitleSideB: document.getElementById('previewTitleSideB').value,
                 cdnModelo: document.getElementById('cdnModelo').value,
                 habilitarTextosPersonalizados: document.getElementById('habilitarTextosPersonalizados').checked,
                 habilitarImagemUploladMaisCustomizada: document.getElementById('habilitarImagemUploladMaisCustomizada').checked,
+                habilitarWASlocal: document.getElementById('habilitarWASlocal').checked,
                 
             };
 
@@ -60,12 +62,15 @@
             document.getElementById('corTextTitle').value = config.corTextTitle
             document.getElementById('corTextButton').value = config.corTextButton
             document.getElementById('radiusButton').value = config.radiusButton
+            document.getElementById('tamanhoTitulo').value = config.tamanhoTitulo
             document.getElementById('previewTitleSideA').value = config.previewTitleSideA;
             document.getElementById('previewTitleSideB').value = config.previewTitleSideB;
             document.getElementById('cdnModelo').value = config.cdnModelo;
             document.getElementById('habilitarTextosPersonalizados').checked = config.habilitarTextosPersonalizados;
             document.getElementById('habilitarImagemUploladMaisCustomizada').checked = config.habilitarImagemUploladMaisCustomizada;
-
+            document.getElementById('habilitarWASlocal').checked = config.habilitarWASlocal;
+            
+            
             
         }
 
@@ -130,6 +135,10 @@
                 <input type="text" id="radiusButton" name="radiusButton" value="48px"><br><br>
             </div>
             <div>
+                <label for="tamanhoTitulo">tamanhoTitulo</label>
+                <input type="text" id="tamanhoTitulo" name="tamanhoTitulo" value="48px"><br><br>
+            </div>
+            <div>
                 <label for="timeoutCaptura">Timeout para captura automática (ms):</label>
                 <input type="number" id="timeoutCaptura" name="timeoutCaptura" value="120000"><br><br>
             </div>
@@ -184,6 +193,12 @@
                 <input style="margin-right: 10px" type="checkbox" id="habilitarImagemUploladMaisCustomizada"
                     name="habilitarImagemUploladMaisCustomizada"><br><br>
                 <label for="habilitarImagemUploladMaisCustomizada">habilitarImagemUploladMaisCustomizada:</label>
+            </div>
+
+            <div style="flex-direction: row; align-items: end;">
+                <input style="margin-right: 10px" type="checkbox" id="habilitarWASlocal"
+                    name="habilitarWASlocal"><br><br>
+                <label for="habilitarWASlocal">habilitarWASlocal:</label>
             </div>
         </div>
 
