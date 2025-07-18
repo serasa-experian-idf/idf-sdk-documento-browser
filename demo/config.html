@@ -31,6 +31,7 @@
                 habilitarTextosPersonalizados: document.getElementById('habilitarTextosPersonalizados').checked,
                 habilitarImagemUploladMaisCustomizada: document.getElementById('habilitarImagemUploladMaisCustomizada').checked,
                 habilitarWASlocal: document.getElementById('habilitarWASlocal').checked,
+                isLocalFilePdfJS: document.getElementById('isLocalFilePdfJS').checked,
                 proxyUrl: document.getElementById('proxyUrl').value,
             };
 
@@ -69,6 +70,7 @@
             document.getElementById('habilitarTextosPersonalizados').checked = config.habilitarTextosPersonalizados;
             document.getElementById('habilitarImagemUploladMaisCustomizada').checked = config.habilitarImagemUploladMaisCustomizada;
             document.getElementById('habilitarWASlocal').checked = config.habilitarWASlocal;
+            document.getElementById('isLocalFilePdfJS').checked = config.isLocalFilePdfJS;
             document.getElementById('proxyUrl').value = config.proxyUrl;
         }
 
@@ -201,6 +203,13 @@
                 <input style="margin-right: 10px" type="checkbox" id="habilitarWASlocal"
                     name="habilitarWASlocal"><br><br>
                 <label for="habilitarWASlocal">habilitarWASlocal:</label>
+            </div>
+
+
+            <div style="flex-direction: row; align-items: end;">
+                <input style="margin-right: 10px" type="checkbox" id="isLocalFilePdfJS"
+                    name="isLocalFilePdfJS"><br><br>
+                <label for="isLocalFilePdfJS">isLocalFilePdfJS:</label>
             </div>
         </div>
 
