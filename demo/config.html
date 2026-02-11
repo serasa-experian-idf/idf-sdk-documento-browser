@@ -19,6 +19,8 @@
                 documentosAceitos: document.getElementById('documentosAceitos').value,
                 wizzard: document.getElementById('wizzard').checked,
                 corPrimary: document.getElementById('corPrimary').value,
+                corContinueHereButton: document.getElementById('corContinueHereButton').value,
+                corTryAgainButton: document.getElementById('corTryAgainButton').value,
                 fontFamily: document.getElementById('fontFamily').value,
                 corTextCorpo: document.getElementById('corTextCorpo').value,
                 corTextTitle: document.getElementById('corTextTitle').value,
@@ -58,6 +60,8 @@
             document.getElementById('documentosAceitos').value = config.documentosAceitos;
             document.getElementById('wizzard').checked = config.wizzard;
             document.getElementById('corPrimary').value = config.corPrimary;
+            document.getElementById('corContinueHereButton').value = config.corContinueHereButton;
+            document.getElementById('corTryAgainButton').value = config.corTryAgainButton;
             document.getElementById('fontFamily').value = config.fontFamily;
             document.getElementById('corTextCorpo').value = config.corTextCorpo
             document.getElementById('corTextTitle').value = config.corTextTitle
@@ -109,6 +113,18 @@
             <div>
                 <label for="corPrimary">Cor primária:</label>
                 <input type="color" id="corPrimary" name="corPrimary" value="#002DD1"><br><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <label for="corContinueHereButton">Cor do botão Continuar por aqui:</label>
+                <input type="color" id="corContinueHereButton" name="corContinueHereButton" value="#002DD1"><br><br>
+            </div>
+ 
+            <div>
+                <label for="corTryAgainButton">Cor texto botão Substituir imagem:</label>
+                <input type="color" id="corTryAgainButton" name="corTryAgainButton" value="#002DD1"><br><br>
             </div>
         </div>
 
