@@ -35,6 +35,8 @@
                 habilitarWASlocal: document.getElementById('habilitarWASlocal').checked,
                 isLocalFilePdfJS: document.getElementById('isLocalFilePdfJS').checked,
                 proxyUrl: document.getElementById('proxyUrl').value,
+                proxyAuthorizationValue: document.getElementById('proxyAuthorizationValue').value,
+                proxyAuthorizationHeaderName: document.getElementById('proxyAuthorizationHeaderName').value
             };
 
             localStorage.setItem('config_doc', JSON.stringify(config));
@@ -76,6 +78,8 @@
             document.getElementById('habilitarWASlocal').checked = config.habilitarWASlocal;
             document.getElementById('isLocalFilePdfJS').checked = config.isLocalFilePdfJS;
             document.getElementById('proxyUrl').value = config.proxyUrl;
+            document.getElementById('proxyAuthorizationValue').value = config.proxyAuthorizationValue;
+            document.getElementById('proxyAuthorizationHeaderName').value = config.proxyAuthorizationHeaderName
         }
 
         window.onload = function () {
@@ -187,6 +191,14 @@
             <div>
                 <label for="proxyUrl">Proxy URL:</label>
                 <input type="text" id="proxyUrl" name="proxyUrl" value=""><br><br>
+            </div>
+            <div>
+                <label for="proxyAuthorizationValue">Proxy Authorization Value:</label>
+                <input type="text" id="proxyAuthorizationValue" name="proxyAuthorizationValue" value=""><br><br>
+            </div>
+            <div>
+                <label for="proxyAuthorizationHeaderName">Proxy Authorization Header Name:</label>
+                <input type="text" id="proxyAuthorizationHeaderName" name="proxyAuthorizationHeaderName" value=""><br><br>
             </div>
         </div>
 
